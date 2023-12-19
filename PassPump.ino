@@ -25,7 +25,7 @@ Buttons and pages layout
    Passwords | Edit Password
    Edit pins
 
-   Passwords/Settings
+   Passwords
    back   | next
    select | home
    
@@ -45,6 +45,9 @@ Buttons and pages layout
    Login -> Enter in old pin, enter in new pin -> change pin
    Password -> Enter in old pin, enter in new pin -> change pin
 */
+
+// Abstract Layer
+// State Machine
 
 #include <Wire.h>
 #include <Adafruit_GFX.h>
