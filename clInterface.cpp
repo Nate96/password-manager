@@ -1,21 +1,80 @@
+// GOAL: create new version with multiple file
+// GOAL: Flash from mac to board
+// Data Structure with all passwords. Make it easy to edit file on computer before flashing
+// RESEARCH: Store data on the chip
+
+/*
+Displays
+   Login
+   Passwords (Cycle through buttons)
+
+Functions
+   Choose password
+   Create password
+   Enter in Pin to send password
+   Enter in pin to login
+   Enter in new login pin
+
+Buttons and pages layout
+   Login Screen
+      1   2
+      3   4
+      5   login
+   
+   Main
+   Passwords | Edit Password
+   Edit pins
+
+   Passwords
+   back   | next
+   select | home
+   
+   Edit Passwords
+   back   | next
+   new    | delete
+   select | home
+
+   Select Passwrod
+   1  2
+   3  4
+   5  enter
+
+   Edit Pins
+   login | Password
+
+Login -> Enter in old pin, enter in new pin -> change pin
+Password -> Enter in old pin, enter in new pin -> change pin
+*/
+
+// Hardware Abstract Layer (HAL)
+// State Machine
+// Password Generator
+
 #include <iostream>
+#include "StateMachine.h"
+#include "HardwareAbstract.h"
+
 using namespace std;
-
-#define BUTTON_1 1
-#define BUTTON_2 2
-#define BUTTON_3 3
-#define BUTTON_4 4
-#define BUTTON_5 5
-
+using namespace PasswordManager;
 
 int main() {
-   cout << "Hello, world, from Visual C++!" << endl;
-   int input;
-   cin >> input;
+   state_machine sm;
+   hardware_abstract hal;
 
-   switch(input) {
-      case BUTTON_1:
-         cout << "You clicked 1" << endl;
-         break;
+   int input;
+
+   sm.login();
+
+   while (true) {
+     input = hal.getInput();
+     sm.updateSate(input);
    }
+
+   /*
+    * Login
+    * While true:
+    *    get input
+    *    update state
+    */
+
 }

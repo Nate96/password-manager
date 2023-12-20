@@ -49,6 +49,7 @@ Buttons and pages layout
 
 // Abstract Layer
 // State Machine
+// Password Generator
 
 #include <Wire.h>
 #include <Adafruit_GFX.h>
