@@ -2,6 +2,7 @@
 // GOAL: create new version with multiple file
 // GOAL: Flash from mac to board
 // Data Structure with all passwords. Make it easy to edit file on computer before flashing
+// RESEARCH: Store data on the chip
 
 /*
 Displays
@@ -111,7 +112,7 @@ void resetButtons(){
   previousButtonState_6 = HIGH;
 }
 
-void displayLogin(){
+void displayLogin() {
   //login
   resetButtons();
   delay(100);
