@@ -4,23 +4,23 @@
 // RESEARCH: Store data on the chip
 
 /*
-Displays
+   Displays
    Login
    Passwords (Cycle through buttons)
 
-Functions
+   Functions
    Choose password
    Create password
    Enter in Pin to send password
    Enter in pin to login
    Enter in new login pin
 
-Buttons and pages layout
+   Buttons and pages layout
    Login Screen
-      1   2
-      3   4
-      5   login
-   
+   1   2
+   3   4
+   5   login
+
    Main
    Passwords | Edit Password
    Edit pins
@@ -28,7 +28,7 @@ Buttons and pages layout
    Passwords
    back   | next
    select | home
-   
+
    Edit Passwords
    back   | next
    new    | delete
@@ -42,9 +42,9 @@ Buttons and pages layout
    Edit Pins
    login | Password
 
-Login -> Enter in old pin, enter in new pin -> change pin
-Password -> Enter in old pin, enter in new pin -> change pin
-*/
+   Login -> Enter in old pin, enter in new pin -> change pin
+   Password -> Enter in old pin, enter in new pin -> change pin
+   */
 
 // Hardware Abstract Layer (HAL)
 // State Machine
@@ -55,26 +55,17 @@ Password -> Enter in old pin, enter in new pin -> change pin
 #include "HardwareAbstract.h"
 
 using namespace std;
-using namespace PasswordManager;
 
 int main() {
-   state_machine sm;
-   hardware_abstract hal;
-
-   int input;
+   StateMachine sm;
+   HardwareAbstract hal;
 
    sm.login();
 
    while (true) {
-     input = hal.getInput();
-     sm.updateSate(input);
+      sm.updateSate(input);
+      input = hal.getInput();
    }
 
-   /*
-    * Login
-    * While true:
-    *    get input
-    *    update state
-    */
-
+   return 0;
 }

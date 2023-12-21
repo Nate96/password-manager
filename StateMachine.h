@@ -6,17 +6,20 @@
  *    Edit Passwords
  *    Edit Pins
  */
+#ifndef STATEMACHINE_H
+#define STATEMACHINE_H
 
-namespace PasswordManager {
-   class state_machine {
-      public:
-         /*
-         * Updates the state of the programe
-         */
-         void updateSate(int input);
-         void login();
-      private:
+#include "HardwareAbstract.h"
 
-   };
-}
-
+class StateMachine {
+   public:
+      void updateSate(int input);
+      void login();
+   private:
+      void home();
+      void passwords();
+      void editPasword();
+      void enterPin();
+      void editPins();
+};
+#endif
