@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ostream>
 #include "StateMachine.h"
 #include "HardwareAbstract.h"
 
@@ -16,7 +17,7 @@ void StateMachine::login() {
       input = hal.getInput();
    }
 
-   cout << "Welcome";
+   cout << "Welcome" << endl;
 }
 
 void updateSate(int input) {

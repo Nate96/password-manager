@@ -50,7 +50,7 @@
 // State Machine
 // Password Generator
 
-#include <iostream>
+include <iostream>
 #include "StateMachine.h"
 #include "HardwareAbstract.h"
 
@@ -60,12 +60,15 @@ int main() {
    StateMachine sm;
    HardwareAbstract hal;
 
+   int input;
+
    sm.login();
 
-   while (true) {
-      sm.updateSate(input);
-      input = hal.getInput();
-   }
-
+//   while (true) {
+//      input = hal.getInput();
+//      sm.updateSate(input);
+//      
+//   }
+//
    return 0;
 }
