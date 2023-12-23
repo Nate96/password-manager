@@ -50,6 +50,7 @@
 // State Machine
 // Password Generator
 
+// TODO: Inplement Main state
 #include "StateMachine.h"
 #include "HardwareAbstract.h"
 
