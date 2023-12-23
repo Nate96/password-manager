@@ -50,7 +50,6 @@
 // State Machine
 // Password Generator
 
-include <iostream>
 #include "StateMachine.h"
 #include "HardwareAbstract.h"
 

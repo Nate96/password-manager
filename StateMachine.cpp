@@ -5,6 +5,8 @@
 
 using namespace std;
 
+// REASERCH: Only expect 5 inputs for the password
+// TODO: Use 6 as the enter key instead of enter.
 void StateMachine::login() {
    int input;
    HardwareAbstract hal;
