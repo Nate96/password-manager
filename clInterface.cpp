@@ -51,6 +51,7 @@
 // Password Generator
 
 // TODO: Inplement Main state
+// TODO: Flash current state to board
 #include "StateMachine.h"
 #include "HardwareAbstract.h"
 
