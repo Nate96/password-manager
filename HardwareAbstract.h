@@ -1,3 +1,5 @@
+// TODO: Read and Right to File type
+
 #ifndef HARDWARE_ABSTRACT_H
 #define HARDWARE_ABSTRACT_H
 
