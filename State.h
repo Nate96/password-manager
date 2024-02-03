@@ -52,6 +52,6 @@ class State {
     /** displays text for user */
     void writeScreen();
 
-    /** determins new states based on user input */
-    STATES getNewState();
+    /** determins new states based on user input and writes it to memory */
+    void setNextState();
 };
