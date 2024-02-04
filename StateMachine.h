@@ -21,6 +21,6 @@ class StateMachine {
      * Gets Current State from the Hardware Abstraction Layer
      * @return State object
      */
-    STATE getState();
+    State::STATES getState();
 };
 #endif
