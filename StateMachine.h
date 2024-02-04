@@ -1,25 +1,26 @@
-/*
- * STATES:
- *    Login
- *    Main
- *    Select Password
- *    Edit Passwords
- *    Edit Pins
- */
 #ifndef STATEMACHINE_H
 #define STATEMACHINE_H
 
 #include "HardwareAbstract.h"
+#include "State.h"
 
 class StateMachine {
-   public:
-      void updateSate(int input);
-      void login();
-   private:
-      void home();
-      void passwords();
-      void editPasword();
-      void enterPin();
-      void editPins();
+  public:
+    /**
+     * Delete objects by using pointers and assigning the pointer to the new
+     * state.
+     * ENSURE: All created States are released from memory when done using 
+     * pointers
+     */
+    void manage();
+
+  private:
+    HardwareAbstract hal;
+   
+    /**
+     * Gets Current State from the Hardware Abstraction Layer
+     * @return State object
+     */
+    STATE getState();
 };
 #endif
