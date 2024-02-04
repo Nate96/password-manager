@@ -55,7 +55,6 @@
 #include "StateMachine.h"
 #include "HardwareAbstract.h"
 
-using namespace std;
 
 int main() {
    StateMachine sm;
