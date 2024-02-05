@@ -18,5 +18,11 @@ class StateMachine {
 
   private:
     State::STATES nextState;
+   
+    /**
+     * Gets Current State from the Hardware Abstraction Layer
+     * @return State object
+     */
+    State::STATES getState();
 };
 #endif
