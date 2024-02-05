@@ -1,4 +1,4 @@
-// GOAL: create new version with multiple file
+/ GOAL: create new version with multiple file
 // GOAL: Flash from mac to board
 // RESEARCH: Store data on the chip
 
