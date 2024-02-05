@@ -39,12 +39,14 @@
 class State {
   public:
     enum STATES {Login, Main, Select_Password, Edit_Password, Edit_Pin, Enter_Pin};
-    void run();
+    /**
+     * Runs the current state.
+     * @Returns the next state enum
+     */
+    STATES run();
 
   private:
     HardwareAbstract hal;
-    STATES nextState;
-    STATES currentState;
 
     /** assigns proper functions to buttons for the current state. */
     void configbuttons();

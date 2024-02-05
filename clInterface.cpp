@@ -10,10 +10,10 @@
 // IDEA:Data Structure with all passwords. Make it easy to edit file on computer
 // before flashing
 
-#include "StateMachine.h"
+#include "src/StateMachine.h"
 
 int main() {
   StateMachine sm;
-  sm.manage();
+  while(true) { sm.manage(); }
   return 0;
 }

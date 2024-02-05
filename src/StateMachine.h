@@ -6,6 +6,8 @@
 
 class StateMachine {
   public:
+    StateMachine();
+
     /**
      * Delete objects by using pointers and assigning the pointer to the new
      * state.
@@ -15,12 +17,6 @@ class StateMachine {
     void manage();
 
   private:
-    HardwareAbstract hal;
-   
-    /**
-     * Gets Current State from the Hardware Abstraction Layer
-     * @return State object
-     */
-    STATE getState();
+    State::STATES nextState;
 };
 #endif

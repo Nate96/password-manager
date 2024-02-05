@@ -1,61 +1,29 @@
-// Create c++ interface
-// GOAL: create new version with multiple file
-// GOAL: Flash from mac to board
-// Data Structure with all passwords. Make it easy to edit file on computer before flashing
-// RESEARCH: Store data on the chip
-
-/*
-Displays
-   Login
-   Passwords (Cycle through buttons)
-
-Functions
-   Choose password
-   Create password
-   Enter in Pin to send password
-   Enter in pin to login
-   Enter in new login pin
-
-Buttons and pages layout
-   Login Screen
-      1   2
-      3   4
-      5   login
-   
-   Main
-   Passwords | Edit Password
-   Edit pins
-
-   Passwords
-   back   | next
-   select | home
-   
-   Edit Passwords
-   back   | next
-   new    | delete
-   select | home
-
-   Select Passwrod
-   1  2
-   3  4
-   5  enter
-
-   Edit Pins
-   login | Password
-
-   Login -> Enter in old pin, enter in new pin -> change pin
-   Password -> Enter in old pin, enter in new pin -> change pin
-*/
-
-// Abstract Layer
-// State Machine
-// Password Generator
-
+// TODO: Read and Right to File type
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <Keyboard.h>
 
+#ifndef HARDWARE_ABSTRACT_H
+#define HARDWARE_ABSTRACT_H
+
+#define BUTTON_1 1
+#define BUTTON_2 2
+#define BUTTON_3 3
+#define BUTTON_4 4
+#define BUTTON_5 5
+#define BUTTON_6 6
+
+class HardwareAbstract {
+   public:
+      int getInput();
+      int getPassword();
+   private:
+
+};
+#endif
+
+/** 
 // OLED dementions
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
@@ -702,3 +670,4 @@ void displayPg5(){
     delay(5);
   }
 }
+*/
